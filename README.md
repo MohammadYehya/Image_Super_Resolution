@@ -1,2 +1,2 @@
 # Image_Super_Resolution
-Reconstructing high-resolution (HR) images from low-resolution (LR) inputs by using pre-trained models like ESRGAN &amp; FSRCNN.
+A collection of AI models focusing on reconstructing high-resolution (HR) images from low-resolution (LR) inputs by which include pre-trained models like ESRGAN &amp; FSRCNN.
