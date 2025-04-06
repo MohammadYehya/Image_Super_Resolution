@@ -3,7 +3,7 @@ import numpy as np
 import torch
 from network_swinir import SwinIR as net
 
-model_path = "../models/003_realSR_BSRGAN_DFO_s64w8_SwinIR-M_x4_GAN-with-dict-keys-params-and-params_ema.pth"
+model_path = "../models/SwinIR_x4.pth"
 state_dict = torch.load(model_path, map_location=torch.device('cpu'))['params_ema']
 
 model = net(upscale=4, in_chans=3, img_size=64, window_size=8, img_range=1., depths=[6, 6, 6, 6, 6, 6], embed_dim=180, num_heads=[6, 6, 6, 6, 6, 6], mlp_ratio=2, upsampler='nearest+conv', resi_connection='1conv')
