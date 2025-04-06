@@ -4,7 +4,7 @@ from PIL import Image
 from basicsr.archs.rrdbnet_arch import RRDBNet
 from realesrgan import RealESRGANer
 
-model_path = 'models/RealEsrgan_x4plus.pth'
+model_path = '../models/RealEsrgan_x4plus.pth'
 state_dict = torch.load(model_path, map_location=torch.device('cpu'))['params_ema']
 
 model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
